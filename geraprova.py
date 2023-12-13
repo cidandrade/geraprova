@@ -1,35 +1,37 @@
-# geraprova.py
-# Versão 1.0.2
-#
-# Como executar:
-# Em Linux: Abra um terminal, navegue até o diretório deste arquivo e execute o seguinte comando
-# python3 geraprova.py
-#
-# Este programa é licenciado como Software Livre: 
-# Você pode redistribuí-lo e/ou modificá-lo sob os termos da 
-# Licença Pública Geral GNU, conforme publicada pela Free Software Foundation, 
-# seja na versão 3 da Licença ou (a seu critério) qualquer versão posterior.
-# 
-# Este programa é distribuído na esperança de que seja útil, mas SEM NENHUMA GARANTIA; 
-# sem mesmo a garantia implícita de COMERCIABILIDADE ou ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA. 
-# Veja a Licença Pública Geral GNU para mais detalhes.
-#
-# Você deveria ter recebido uma cópia da Licença Pública Geral GNU junto com este programa. 
-# Se não recebeu, consulte https://www.gnu.org/licenses/.
-#
-# ChangeLog
-# 1.0.0 28/11/2023: Versão operacional
-# 1.0.1 2/12/2023: Otimização de desempenho
-# 1.0.2 5/12/2023: Inclusão de tratamento de erro em abertura de arquivo
-#
-# Cid R. Andrade
-# 
-# Gera questões de múltipla escolha
-#
-# O arquivo que é importado deve conter uma lista com diversas tuplas de questões
-# Cada tupla deve conter o enunciado e as cinco opções, sendo a primeira delas a correta
-# Exemplo: [("Enunciado", "Correta", "Distrator 1", "Distrator 2", "Distrator 3", "Distrator 4")]
-# 
+"""
+geraprova.py
+Versão 1.0.2
+
+Como executar:
+Em Linux: Abra um terminal, navegue até o diretório deste arquivo e execute o seguinte comando
+python3 geraprova.py
+
+Este programa é licenciado como Software Livre: 
+Você pode redistribuí-lo e/ou modificá-lo sob os termos da 
+Licença Pública Geral GNU, conforme publicada pela Free Software Foundation, 
+seja na versão 3 da Licença ou (a seu critério) qualquer versão posterior.
+ 
+Este programa é distribuído na esperança de que seja útil, mas SEM NENHUMA GARANTIA; 
+sem mesmo a garantia implícita de COMERCIABILIDADE ou ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA. 
+Veja a Licença Pública Geral GNU para mais detalhes.
+
+Você deveria ter recebido uma cópia da Licença Pública Geral GNU junto com este programa. 
+Se não recebeu, consulte https://www.gnu.org/licenses/.
+
+ChangeLog
+1.0.0 28/11/2023: Versão operacional
+1.0.1 2/12/2023: Otimização de desempenho
+1.0.2 5/12/2023: Inclusão de tratamento de erro em abertura de arquivo
+
+Cid R. Andrade
+ 
+Gera questões de múltipla escolha
+
+O arquivo que é importado deve conter uma lista com diversas tuplas de questões
+Cada tupla deve conter o enunciado e as cinco opções, sendo a primeira delas a correta
+Exemplo: [("Enunciado", "Correta", "Distrator 1", "Distrator 2", "Distrator 3", "Distrator 4")]
+ 
+"""
 
 # A biblioteca ast é utilizada para avaliar se o arquivo externo está corretamente formatado
 # como uma expressão Python válida
@@ -45,7 +47,7 @@ fonte = "php.txt"
 abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 # Funções
-# A função intInput recebe uma String e força a entrada de uma entrada numérica inteira válida
+# A função intInput recebe uma String e força uma entrada numérica inteira válida
 def intInput(t):
 	while True:
 		try:
